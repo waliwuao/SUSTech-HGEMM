@@ -1,9 +1,13 @@
 # 更改说明
-目前仅更改了hgemm_compare.cu与hgemm.cu中的核函数，并通过修改主函数在本地进行了初步的测试
+更改了hgemm_compare.cu与hgemm.cu中的核函数，并通过修改主函数在本地进行了初步的测试
 
 测试结果表示，该核函数的计算rel-error < 0.05，但gflops存在虚高的问题
 
 在local_test文件夹中有我本地测试的代码与说明
+
+## 7月11号更新
+
+添加了hgemm_compare（local_test)可以直接进行准确性检验和性能对比（建议使用）
 
 
 # SUSTech HPC - GPU-HGEMM 加速赛题 赛题模板
