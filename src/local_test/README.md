@@ -1,5 +1,8 @@
 # local_test
 
+# 最新更新
+添加了hgemm_compare,用于10个样例的正确性检验与性能对比，可以直接运行，并打印出结果，但并不包含gflops的计算
+
 ## 项目简介
 该文件夹包含基于 CUDA 的通用矩阵乘法 (GEMM) 实现，利用 NVIDIA Tensor Core 的 Warp Matrix Multiply-Accumulate (WMMA) 技术进行加速。代码旨在展示如何使用 CUDA 编程和 WMMA API 来优化矩阵计算性能。
 
