@@ -18,7 +18,7 @@ using namespace nvcuda;
 #define PAD(X,Y) (X % Y ? (X/Y+1)*Y : X)
 #define BLOCK_DIM_DEFAULT 512
 #define WARP_SIZE 32
-#define TIMES 1
+#define TIMES 5
 
 
 template <typename TIN,typename TOUT,int M_TILE,int N_TILE,int K_TILE>
@@ -359,11 +359,6 @@ int main(int argc, char** argv) {
         std::cout << "Performance comparison:" << std::endl;
         std::cout << "WMMA min time: " << wmma_time << " ms" << std::endl;
         std::cout << "cuBLAS min time: " << cublas_time << " ms" << std::endl;
-        if (wmma_time < cublas_time) {
-            std::cout << "WMMA is " << cublas_time / wmma_time << "x faster than cuBLAS." << std::endl;
-        } else {
-            std::cout << "cuBLAS is " << wmma_time / cublas_time << "x faster than WMMA." << std::endl;
-        }
     }
 
     return 0;
